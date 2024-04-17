@@ -1,0 +1,90 @@
+site_name: FastAPI do Zero
+site_url: https://farmfastapi.hylansilva.dev
+repo_url: https://github.com/hylansilvadev/farmfastapi
+repo_name: hylansilvadev/farmfastapi
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  language: pt-BR
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+    - scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.keys
+  - footnotes
+  - admonition
+  - markdown.extensions.attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+
+plugins:
+  - macros
+  - glightbox
+  - mkdocs-video
+  - search:
+      lang: pt
+  - git-authors:
+      show_email_address: false
+      show_line_count: true
+  - git-revision-date-localized
+  - social
+  - with-pdf:
+      author: Eduardo Mendes (@dunossauro)
+      cover_title: FastAPI do zero
+      cover_subtitle: Uma introdução prática!
+      copyright: CC BY-NC-SA
+      toc_level: 6
+      enabled_if_env: ENABLE_PDF_EXPORT
+      toc_title: Índice
+  - exclude:
+      glob:
+        - "wip.md"
+  - exclude-unused-files
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hylansilvadev
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hylansilvadev
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/hylansilvadev
