@@ -1,4 +1,4 @@
-site_name: FastAPI do Zero
+site_name: "FARM: FastApi React MongoDB"
 site_url: https://farmfastapi.hylansilva.dev
 repo_url: https://github.com/hylansilvadev/farmfastapi
 repo_name: hylansilvadev/farmfastapi
@@ -15,14 +15,19 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.integrate
   palette:
     - scheme: slate
-      primary: deep purple
+      primary: light green
       toggle:
         icon: material/weather-sunny
         name: Modo claro
     - scheme: default
-      primary: deep purple
+      primary: green
       toggle:
         icon: material/weather-night
         name: Modo noturno
@@ -55,7 +60,21 @@ markdown_extensions:
 
 plugins:
   - macros
-  - glightbox
+  - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
+       background: white
+       shadow: true
   - mkdocs-video
   - search:
       lang: pt
@@ -79,6 +98,8 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+
+copyright: "Feito com 🩷 por: Hylan Silva"
 
 extra:
   social:
